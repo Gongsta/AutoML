@@ -7,7 +7,7 @@ import csv
 #Creating a CSV file for the list of the paths of the datasets
 train_dir = '/Users/stevengong/Desktop/AutoML/dataset/training_set' # Path to the train directory
 class_dirs = [i for i in os.listdir(path=train_dir) if os.path.isdir(os.path.join(train_dir, i))]
- with open('/Users/stevengong/Desktop/AutoML/dataset/train.csv', 'w') as train_csv:
+ with open('/Users/stevengong/Desktop/AutoML/train.csv', 'w') as train_csv:
     fieldnames = ['File Name', 'Label']
     writer = csv.DictWriter(train_csv, fieldnames=fieldnames)
     writer.writeheader()
@@ -20,7 +20,7 @@ class_dirs = [i for i in os.listdir(path=train_dir) if os.path.isdir(os.path.joi
 
 test_dir = '/Users/stevengong/Desktop/AutoML/dataset/test_set' # Path to the train directory
 class_dirs = [i for i in os.listdir(path=train_dir) if os.path.isdir(os.path.join(test_dir, i))]
- with open('/Users/stevengong/Desktop/AutoML/dataset/test.csv', 'w') as test_csv:
+ with open('/Users/stevengong/Desktop/AutoML/test.csv', 'w') as test_csv:
     fieldnames = ['File Name', 'Label']
     writer = csv.DictWriter(test_csv, fieldnames=fieldnames)
     writer.writeheader()
@@ -32,6 +32,6 @@ class_dirs = [i for i in os.listdir(path=train_dir) if os.path.isdir(os.path.joi
     test_csv.close()
 
 
-x_train, y_train = load_image_dataset(csv_file_path='/Users/stevengong/Desktop/AutoML/train.csv', images_path='/Users/stevengong/Desktop/AutoML/dataset/training_set')
+x_train, y_train = load_image_dataset(csv_file_path='/Users/stevengong/Desktop/AutoML/dataset/training_set/train.csv', images_path='/Users/stevengong/Desktop/AutoML/dataset/training_set')
 
-x_test, y_test = load_image_dataset(csv_file_path='/Users/stevengong/Desktop/AutoML/test.csv')
+x_test, y_test = load_image_dataset(csv_file_path='/Users/stevengong/Desktop/AutoML/dataset/test_set/test.csv', images_path='/Users/stevengong/Desktop/AutoML/dataset/test_set')
