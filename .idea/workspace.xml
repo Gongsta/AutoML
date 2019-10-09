@@ -1,10 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="d29e9a74-7605-4816-9520-2b47b27b74e6" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/dogvscatclassifier.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-    </list>
+    <list default="true" id="d29e9a74-7605-4816-9520-2b47b27b74e6" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -34,15 +31,22 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/dogvscatclassifier.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="160">
-              <caret line="10" column="52" selection-start-line="10" selection-start-column="52" selection-end-line="10" selection-end-column="52" />
+            <state relative-caret-position="194">
+              <caret line="20" selection-start-line="20" selection-end-line="32" />
               <folding>
                 <element signature="e#0#22#0" expanded="true" />
               </folding>
             </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/dataset/test.csv">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-1045" />
           </provider>
         </entry>
       </file>
@@ -97,6 +101,13 @@
               <item name="dataset" type="462c0819:PsiDirectoryNode" />
               <item name="training_set" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="AutoML" type="b2602c69:ProjectViewProjectNode" />
+              <item name="AutoML" type="462c0819:PsiDirectoryNode" />
+              <item name="dataset" type="462c0819:PsiDirectoryNode" />
+              <item name="training_set" type="462c0819:PsiDirectoryNode" />
+              <item name="cats" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
@@ -136,7 +147,6 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1440" height="877" extended-state="0" />
-    <editor active="true" />
     <layout>
       <window_info id="Favorites" side_tool="true" />
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24947146" />
@@ -175,14 +185,24 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/dataset/train_csv.csv">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-2112" />
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/dogvscatclassifier.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="160">
-          <caret line="10" column="52" selection-start-line="10" selection-start-column="52" selection-end-line="10" selection-end-column="52" />
+        <state relative-caret-position="194">
+          <caret line="20" selection-start-line="20" selection-end-line="32" />
           <folding>
             <element signature="e#0#22#0" expanded="true" />
           </folding>
         </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dataset/test.csv">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1045" />
       </provider>
     </entry>
   </component>

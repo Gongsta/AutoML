@@ -32,4 +32,6 @@ class_dirs = [i for i in os.listdir(path=train_dir) if os.path.isdir(os.path.joi
     test_csv.close()
 
 
-x_train, y_train = load_image_dataset(csv_file_path=)
+x_train, y_train = load_image_dataset(csv_file_path='/Users/stevengong/Desktop/AutoML/dataset/train.csv', images_path='training_set')
+
+x_test, y_test = load_image_dataset(csv_file_path='')
