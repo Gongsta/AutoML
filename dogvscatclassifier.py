@@ -55,6 +55,8 @@ x_train, y_train = load_image_dataset(csv_file_path='/Users/stevengong/Desktop/A
 x_test, y_test = load_image_dataset(csv_file_path='/Users/stevengong/Desktop/AutoML/dataset/test.csv', images_path='/Users/stevengong/Desktop/AutoML/dataset/test_set')
 """
 
+load_image_dataset()
+
 dir_path = '/Users/stevengong/Desktop/AutoML/dataset/training_set'
 for filename in listdir(dir_path):
     if filename.endswith('.jpg'):
@@ -67,6 +69,7 @@ for filename in listdir(dir_path):
 
 x_train = []
 dir_path = '/Users/stevengong/Desktop/AutoML/dataset/training_set'
+#IMPORTANT: YOU NEED TO CHANGE THIS TO MAKE IT WORK WITH THE READ_CSV
 for filename in listdir(dir_path):
     if filename.endswith('.jpg'):
         try:
@@ -80,9 +83,34 @@ for filename in listdir(dir_path):
             #os.remove(base_dir+"\\"+filename) (Maybe)
 
 
+def read_csv_file(csv_file_path):
+    """Read the csv file and returns two separate list containing file names and their labels.
 
+    Args:
+        csv_file_path: Path to the CSV file.
+
+    Returns:
+        file_names: List containing files names.
+        file_label: List containing their respective labels.
+    """
+    file_names = []
+    file_labels = []
+    with open(csv_file_path, 'r') as files_path:
+        path_list = csv.DictReader(files_path)
+        fieldnames = path_list.fieldnames
+        for path in path_list:
+            file_names.append(path[fieldnames[0]])
+            file_labels.append(path[fieldnames[1]])
+    return file_names, file_labels
+
+
+img_file_names, y = read_csv_file(csv_file_path)
 
 #Building the AutoML
 
 clf = ImageClassifier(verbose=True)
-clf.fit(x_train, y_train, time_limit=training_times)
+clf.fit(x_train, y_train, time_limit=training_times[0])
+clf.final_fit(x_train, y_train, x_test, y_test, retrain=True)
+#y gives us the accuracy of our structure
+y=clf.evaluate(x_test, y_test)
+print(y)
