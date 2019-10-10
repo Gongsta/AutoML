@@ -1,7 +1,6 @@
 import autokeras as ak
 import os
 from os import listdir
-from PIL import Image
 from autokeras import ImageClassifier
 from autokeras.image.image_supervised import load_image_dataset
 import csv
@@ -98,6 +97,9 @@ def transformImageToArray(dir_path, csv_file_location):
                 print('Bad file:', filename)
                 # os.remove(base_dir+"\\"+filename) (Maybe)
 
+    x_values = np.array(x_values)
+    y_values = np.array(y_values)
+
     return x_values, y_values
 
 
@@ -127,7 +129,7 @@ print(y)
 for filename in listdir(dir_path):
     if filename.endswith('.jpg'):
         try:
-            img = Image.open(dir_path+"/"+filename) # open the image file
+            img = image.open(dir_path+"/"+filename) # open the image file
             img.verify() # verify that it is, in fact an image
         except (IOError, SyntaxError) as e:
             print('Bad file:', filename)
