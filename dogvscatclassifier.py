@@ -9,6 +9,14 @@ import csv
 from keras.preprocessing import image
 import numpy as np
 
+training_times = [
+		60 * 60,		# 1 hour
+		60 * 60 * 2,	# 2 hours
+		60 * 60 * 4,	# 4 hours
+		60 * 60 * 8,	# 8 hours
+		60 * 60 * 12,	# 12 hours
+		60 * 60 * 24,	# 24 hours
+	]
 
 #Creating a CSV file for the list of the paths of the datasets
 train_dir = '/Users/stevengong/Desktop/AutoML/dataset/training_set' # Path to the train directory
@@ -64,10 +72,17 @@ for filename in listdir(dir_path):
         try:
             train_img = image.load_img(dir_path+"/"+filename) # open the image file
             train_img = image.img_to_array(train_img)
-            test_image = np.expand_dims(test_image, axis=0)  # this line of code transforms our 3-dimensional array into a 4 dimensional one, axis is 0 since it is in the first position, index = 0
-
-            img.verify() # verify that it is, in fact an image
+            train_img = np.expand_dims(train_img, axis=0)  # this line of code transforms our 3-dimensional array into a 4 dimensional one, axis is 0 since it is in the first position, index = 0
+            x_train.append(train_img)
 
         except (IOError, SyntaxError) as e:
             print('Bad file:', filename)
             #os.remove(base_dir+"\\"+filename) (Maybe)
+
+
+
+
+#Building the AutoML
+
+clf = ImageClassifier(verbose=True)
+clf.fit(x_train, y_train, time_limit=training_times)
