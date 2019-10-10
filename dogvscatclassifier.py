@@ -70,7 +70,7 @@ for filename in listdir(dir_path):
 x_train = []
 dir_path = '/Users/stevengong/Desktop/AutoML/dataset/training_set'
 #IMPORTANT: YOU NEED TO CHANGE THIS TO MAKE IT WORK WITH THE READ_CSV
-for filename in listdir(dir_path):
+for filename in train_file_names:
     if filename.endswith('.jpg'):
         try:
             train_img = image.load_img(dir_path+"/"+filename) # open the image file
@@ -104,7 +104,7 @@ def read_csv_file(csv_file_path):
     return file_names, file_labels
 
 
-img_file_names, y = read_csv_file(csv_file_path)
+train_file_names, y_train = read_csv_file('/Users/stevengong/Desktop/AutoML/dataset/train.csv')
 
 #Building the AutoML
 
