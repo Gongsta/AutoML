@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d29e9a74-7605-4816-9520-2b47b27b74e6" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/dogvscatclassifier.py" beforeDir="false" afterPath="$PROJECT_DIR$/dogvscatclassifier.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -15,50 +15,11 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/dogvscatclassifier.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="293">
-              <caret line="103" selection-start-line="103" selection-end-line="103" />
+            <state relative-caret-position="182">
+              <caret line="118" column="30" selection-start-line="118" selection-start-column="30" selection-end-line="118" selection-end-column="30" />
               <folding>
                 <element signature="e#0#22#0" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/dataset/test.csv">
-          <provider selected="true" editor-type-id="csv-text-editor">
-            <state relative-caret-position="23354">
-              <caret line="1718" column="14" lean-forward="true" selection-start-line="1718" selection-start-column="14" selection-end-line="1718" selection-end-column="14" />
-            </state>
-          </provider>
-          <provider editor-type-id="csv-table-editor">
-            <state showInfoPanel="true" fixedHeaders="false" rowLines="3" />
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file:///usr/local/lib/python3.6/site-packages/keras/preprocessing/image.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="736">
-              <caret line="54" column="4" selection-start-line="54" selection-start-column="4" selection-end-line="54" selection-end-column="4" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file:///usr/local/lib/python3.6/site-packages/autokeras/image/image_supervised.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="320">
-              <caret line="31" column="4" selection-start-line="31" selection-start-column="4" selection-end-line="31" selection-end-column="4" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file:///usr/local/lib/python3.6/site-packages/autokeras/utils.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2320">
-              <caret line="166" selection-start-line="166" selection-end-line="185" />
             </state>
           </provider>
         </entry>
@@ -76,6 +37,7 @@
     <findStrings>
       <find>2260</find>
       <find>Image</find>
+      <find>64</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -216,8 +178,6 @@
     </layout>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/dataset/train_csv.csv" />
-    <entry file="file://$PROJECT_DIR$/dataset/test_set/test.csv" />
     <entry file="file:///usr/local/Cellar/python/3.7.3/Frameworks/Python.framework/Versions/3.7/lib/python3.7/multiprocessing/pool.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-387">
@@ -387,6 +347,22 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/dataset/training_set/dog.200.jpg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dataset/training_set/dog.202.jpg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dataset/test.csv">
+      <provider selected="true" editor-type-id="csv-text-editor">
+        <state relative-caret-position="27488">
+          <caret line="1718" column="14" selection-start-line="1718" selection-start-column="14" selection-end-line="1718" selection-end-column="14" />
+        </state>
+      </provider>
+      <provider editor-type-id="csv-table-editor">
+        <state showInfoPanel="true" fixedHeaders="false" rowLines="3" />
+      </provider>
+    </entry>
     <entry file="file:///usr/local/lib/python3.6/site-packages/keras/preprocessing/image.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="736">
@@ -408,23 +384,17 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/dataset/training_set/dog.200.jpg">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/dataset/test.csv">
-      <provider selected="true" editor-type-id="csv-text-editor">
-        <state relative-caret-position="23354">
-          <caret line="1718" column="14" lean-forward="true" selection-start-line="1718" selection-start-column="14" selection-end-line="1718" selection-end-column="14" />
+    <entry file="file:///usr/local/lib/python3.6/site-packages/scipy/ndimage/interpolation.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="8431">
+          <caret line="604" selection-start-line="604" selection-end-line="604" />
         </state>
-      </provider>
-      <provider editor-type-id="csv-table-editor">
-        <state showInfoPanel="true" fixedHeaders="false" rowLines="3" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/dogvscatclassifier.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="293">
-          <caret line="103" selection-start-line="103" selection-end-line="103" />
+        <state relative-caret-position="182">
+          <caret line="118" column="30" selection-start-line="118" selection-start-column="30" selection-end-line="118" selection-end-column="30" />
           <folding>
             <element signature="e#0#22#0" expanded="true" />
           </folding>
