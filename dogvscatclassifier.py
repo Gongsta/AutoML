@@ -14,7 +14,7 @@ import cv2
 train_dir = '/Users/stevengong/Desktop/AutoML/dataset/training_set' # Path to the train directory
 test_dir = '/Users/stevengong/Desktop/AutoML/dataset/test_set' # Path to the train directory
 train_csv = '/Users/stevengong/Desktop/AutoML/dataset/train.csv'
-test_csv = '/Users/stevengong/Desktop/AutoML/dataset/test.csv''
+test_csv = '/Users/stevengong/Desktop/AutoML/dataset/test.csv'
 training_times = [
 		60 * 60,		# 1 hour i.e. 60*60 seconds
 		60 * 60 * 2,	# 2 hours
@@ -49,7 +49,6 @@ x_train, y_train = load_image_dataset(csv_file_path='/Users/stevengong/Desktop/A
 
 x_test, y_test = load_image_dataset(csv_file_path='/Users/stevengong/Desktop/AutoML/dataset/test.csv', images_path='/Users/stevengong/Desktop/AutoML/dataset/test_set')
 """
-load_image_dataset()
 def read_csv_file(csv_file_path):
     """Read the csv file and returns two separate list containing file names and their labels.
 
@@ -94,7 +93,7 @@ def transformImageToArray(dir_path, csv_file_location):
                 print('Bad file:', filename)
                 # os.remove(base_dir+"\\"+filename) (Maybe)
 
-    x_values = np.stack(x_values)
+    x_values = np.vstack(x_values)
     y_values = np.array(y_values)
 
 
