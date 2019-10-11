@@ -42,35 +42,7 @@ def createCSV(class_directory, csv_directory):
         csv_file.close()
 
 
-"""
-These 2 lines of code does not work for me for some reason...I tried debugging without success
 
-x_train, y_train = load_image_dataset(csv_file_path='/Users/stevengong/Desktop/AutoML/dataset/train.csv', images_path='/Users/stevengong/Desktop/AutoML/dataset/training_set', parallel=True)
-
-x_test, y_test = load_image_dataset(csv_file_path='/Users/stevengong/Desktop/AutoML/dataset/test.csv', images_path='/Users/stevengong/Desktop/AutoML/dataset/test_set')
-"""
-def read_csv_file(csv_file_path):
-    """Read the csv file and returns two separate list containing file names and their labels.
-
-    Args:
-        csv_file_path: Path to the CSV file.
-
-    Returns:
-        file_names: List containing files names.
-        file_label: List containing their respective labels.
-    """
-    file_names = []
-    file_labels = []
-    with open(csv_file_path, 'r') as files_path:
-        path_list = csv.DictReader(files_path)
-        fieldnames = path_list.fieldnames
-        for path in path_list:
-            file_names.append(path[fieldnames[0]])
-            file_labels.append(path[fieldnames[1]])
-    return file_names, file_labels
-
-
-train_file_names, y_train = read_csv_file(train_csv)
 
 #Function to automatically transform images into NumPy arrays
 def transformImageToArray(dir_path, csv_file_location):
@@ -100,14 +72,43 @@ def transformImageToArray(dir_path, csv_file_location):
     return x_values, y_values
 
 
-train_file_names, y_train = read_csv_file('/Users/stevengong/Desktop/AutoML/dataset/train.csv')
+
+"""
+These 2 lines of code does not work for me for some reason...I tried debugging without success. 
+RESOLVED: It was because the csv file contained the DS_Store values
+
+x_train, y_train = load_image_dataset(csv_file_path='/Users/stevengong/Desktop/AutoML/dataset/train.csv', images_path='/Users/stevengong/Desktop/AutoML/dataset/training_set', parallel=True)
+
+x_test, y_test = load_image_dataset(csv_file_path='/Users/stevengong/Desktop/AutoML/dataset/test.csv', images_path='/Users/stevengong/Desktop/AutoML/dataset/test_set')
+"""
+def read_csv_file(csv_file_path):
+    """Read the csv file and returns two separate list containing file names and their labels.
+
+    Args:
+        csv_file_path: Path to the CSV file.
+
+    Returns:
+        file_names: List containing files names.
+        file_label: List containing their respective labels.
+    """
+    file_names = []
+    file_labels = []
+    with open(csv_file_path, 'r') as files_path:
+        path_list = csv.DictReader(files_path)
+        fieldnames = path_list.fieldnames
+        for path in path_list:
+            file_names.append(path[fieldnames[0]])
+            file_labels.append(path[fieldnames[1]])
+    return file_names, file_labels
 
 
+train_file_names, y_train = read_csv_file(train_csv)
 
-x_train, y_train = transformImageToArray(train_dir, train_csv)
+#Fixed the error, the excel file contained the DS_Store file
+#Loading the dataset
+x_train, y_train = load_image_dataset(csv_file_path=train_csv, images_path=train_dir)
+x_test, y_test = load_image_dataset(csv_file_path=test_csv, images_path=test_dir)
 
-np.asarray()
-#Building the AutoML
 
 x_train = x_train.reshape(x_train.shape + (1,))
 
