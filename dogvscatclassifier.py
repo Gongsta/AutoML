@@ -90,7 +90,7 @@ def transformImageToArray(dir_path, csv_file_location):
 
             except (IOError, SyntaxError) as e:
                 print('Bad file:', filename)
-                # os.remove(base_dir+"\\"+filename) (Maybe)
+                # os.remove(base_dir+"/"+filename) (Maybe)
 
     x_values = np.vstack(x_values)
     y_values = np.array(y_values)
@@ -113,6 +113,7 @@ x_test = x_test.reshape(x_test.shape + (1,))
 
 
 clf = ImageClassifier(verbose=True)
+#Chose to set the training time to 3600s for testing purposes
 clf.fit(x_train, y_train, time_limit=training_times[0])
 clf.final_fit(x_train, y_train, x_test, y_test, retrain=True)
 #y gives us the accuracy of our structure
