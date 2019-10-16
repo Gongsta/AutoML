@@ -3,14 +3,44 @@ import os
 from os import listdir
 from autokeras import ImageClassifier
 from autokeras.image.image_supervised import load_image_dataset
+from autokeras.utils import pickle_from_file
+
 import csv
+
+import graphviz
+from graphviz import Digraph
+
 
 from keras.preprocessing import image
 import numpy as np
-import cv2
 
+
+def to_pdf(graph, path):
+    dot = Digraph(comment='The Round Table')
+
+    for index, node in enumerate(graph.node_list):
+        dot.node(str(index), str(node.shape))
+
+    for u in range(graph.n_nodes):
+        for v, layer_id in graph.adj_list[u]:
+            dot.edge(str(u), str(v), str(graph.layer_list[layer_id]))
+
+    dot.render(path)
+
+
+def visualize(path):
+    cnn_module = pickle_from_file(os.path.join(path, 'module'))
+    cnn_module.searcher.path = path
+    for item in cnn_module.searcher.history:
+        model_id = item['model_id']
+        graph = cnn_module.searcher.load_model_by_id(model_id)
+        to_pdf(graph, os.path.join(path, str(model_id)))
+
+visualize(directory)
 
 #Variables
+directory = "/var/folders/7m/gzvzm41j76g30dmpn0_tg17w0000gn/T/autokeras_168F7H"
+directory2 = "/private/var/folders/7m/gzvzm41j76g30dmpn0_tg17w0000gn/T/autokeras_ETBOQD"
 train_dir = '/Users/stevengong/Desktop/AutoML/dataset/training_set' # Path to the train directory
 test_dir = '/Users/stevengong/Desktop/AutoML/dataset/test_set' # Path to the train directory
 train_csv = '/Users/stevengong/Desktop/AutoML/dataset/train.csv'
@@ -38,7 +68,7 @@ def createCSV(class_directory, csv_directory):
         label = 0
         for current_class in class_dirs:
             for image in os.listdir(os.path.join(class_directory, current_class)):
-            writer.writerow({'File Name': str(image), 'Label':label})
+                writer.writerow({'File Name': str(image), 'Label':label})
         label += 1
         csv_file.close()
 
@@ -114,7 +144,7 @@ x_test = x_test.reshape(x_test.shape + (1,))
 
 clf = ImageClassifier(verbose=True)
 #Chose to set the training time to 3600s for testing purposes
-clf.fit(x_train, y_train, time_limit=training_times[0])
+clf.fit(x_train, y_train, time_limit=training_times[3])
 clf.final_fit(x_train, y_train, x_test, y_test, retrain=True)
 #y gives us the accuracy of our structure
 y=clf.evaluate(x_test, y_test)
@@ -131,3 +161,5 @@ for filename in listdir(dir_path):
         except (IOError, SyntaxError) as e:
             print('Bad file:', filename)
             #os.remove(base_dir+"\\"+filename) (Maybe)
+
+
