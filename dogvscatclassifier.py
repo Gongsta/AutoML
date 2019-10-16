@@ -144,7 +144,7 @@ x_test = x_test.reshape(x_test.shape + (1,))
 
 clf = ImageClassifier(verbose=True)
 #Chose to set the training time to 3600s for testing purposes
-clf.fit(x_train, y_train, time_limit=training_times[3])
+clf.fit(x_train, y_train)
 clf.final_fit(x_train, y_train, x_test, y_test, retrain=True)
 #y gives us the accuracy of our structure
 y=clf.evaluate(x_test, y_test)
