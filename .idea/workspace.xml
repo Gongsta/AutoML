@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="d29e9a74-7605-4816-9520-2b47b27b74e6" name="Default Changelist" comment="" />
+    <list default="true" id="d29e9a74-7605-4816-9520-2b47b27b74e6" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dogvscatclassifier.py" beforeDir="false" afterPath="$PROJECT_DIR$/dogvscatclassifier.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sparklesson.py" beforeDir="false" afterPath="$PROJECT_DIR$/sparklesson.py" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -13,8 +17,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/dogvscatclassifier.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="377">
-              <caret line="128" lean-forward="true" selection-start-line="128" selection-end-line="128" />
+            <state relative-caret-position="288">
+              <caret line="141" lean-forward="true" selection-start-line="141" selection-end-line="141" />
               <folding>
                 <element signature="e#0#22#0" expanded="true" />
               </folding>
@@ -79,9 +83,8 @@
     </option>
   </component>
   <component name="ProjectFrameBounds" fullScreen="true">
-    <option name="y" value="23" />
     <option name="width" value="1440" />
-    <option name="height" value="877" />
+    <option name="height" value="900" />
   </component>
   <component name="ProjectLevelVcsManager">
     <ConfirmationsSetting value="2" id="Add" />
@@ -187,7 +190,7 @@
       <window_info anchor="bottom" id="Version Control" order="7" />
       <window_info anchor="bottom" id="Terminal" order="8" weight="0.32891566" />
       <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
-      <window_info active="true" anchor="bottom" id="Python Console" order="10" visible="true" weight="0.4506024" />
+      <window_info active="true" anchor="bottom" id="Python Console" order="10" visible="true" weight="0.18554217" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -371,6 +374,25 @@
     <entry file="file:///usr/local/Cellar/python/3.6.5_1/Frameworks/Python.framework/Versions/3.6/lib/python3.6/pickle.py">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
+    <entry file="file://$PROJECT_DIR$/dataset/test_set/cat.4217.jpg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dataset/test_set/dog.4985.jpg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dataset/single_prediction/cat_or_dog_2.jpg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dogvscatclassifier.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="288">
+          <caret line="141" lean-forward="true" selection-start-line="141" selection-end-line="141" />
+          <folding>
+            <element signature="e#0#22#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file:///usr/local/lib/python3.6/site-packages/autokeras/image/image_supervised.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2288">
@@ -389,25 +411,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="496">
           <caret line="39" column="8" selection-start-line="39" selection-start-column="8" selection-end-line="39" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/dataset/test_set/cat.4217.jpg">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/dataset/test_set/dog.4985.jpg">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/dataset/single_prediction/cat_or_dog_2.jpg">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/dogvscatclassifier.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="377">
-          <caret line="128" lean-forward="true" selection-start-line="128" selection-end-line="128" />
-          <folding>
-            <element signature="e#0#22#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
