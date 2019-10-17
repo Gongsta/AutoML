@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="d29e9a74-7605-4816-9520-2b47b27b74e6" name="Default Changelist" comment="" />
+    <list default="true" id="d29e9a74-7605-4816-9520-2b47b27b74e6" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/sparklesson.py" beforeDir="false" afterPath="$PROJECT_DIR$/sparklesson.py" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -13,8 +15,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/dogvscatclassifier.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1514">
-              <caret line="163" selection-start-line="163" selection-end-line="163" />
+            <state relative-caret-position="154">
+              <caret line="78" column="42" selection-start-line="78" selection-start-column="42" selection-end-line="78" selection-end-column="42" />
               <folding>
                 <element signature="e#0#22#0" expanded="true" />
               </folding>
@@ -403,8 +405,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/dogvscatclassifier.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1514">
-          <caret line="163" selection-start-line="163" selection-end-line="163" />
+        <state relative-caret-position="154">
+          <caret line="78" column="42" selection-start-line="78" selection-start-column="42" selection-end-line="78" selection-end-column="42" />
           <folding>
             <element signature="e#0#22#0" expanded="true" />
           </folding>
