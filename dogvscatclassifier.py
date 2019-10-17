@@ -36,7 +36,6 @@ def visualize(path):
         graph = cnn_module.searcher.load_model_by_id(model_id)
         to_pdf(graph, os.path.join(path, str(model_id)))
 
-visualize(directory)
 
 #Variables
 directory = "/var/folders/7m/gzvzm41j76g30dmpn0_tg17w0000gn/T/autokeras_168F7H"
