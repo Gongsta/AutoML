@@ -20,15 +20,16 @@ spark = SparkSession.builder.getOrCreate()
 print(spark)
 
 
-# Print the tables in the catalog
+#attribute called catalog lists all the data inside the cluster. 
+#This attribute has a few methods for extracting different pieces of information.
 print(spark.catalog.listTables())
 
 """Getting from Spark Cluster to a Pandas Dataframe"""
 
-# Don't change this query
+# Don't change this query. The query says to select all items with limit 10 from the flights table
 query = "FROM flights SELECT * LIMIT 10"
 
-#Flights would be a Spark Dataframe of flights
+#flights would be a Spark Dataframe of flights
 #This table contains a row for every flight that left Portland International Airport (PDX) 
 #or Seattle-Tacoma International Airport (SEA) in 2014 and 2015.
 
@@ -79,9 +80,63 @@ airports = spark.read.csv(file_path, header=True)
 airports.show()
 
 
+"""Manipulation Data"""
+
+# Create the DataFrame flights
+flights = spark.table("flights")
+
+# Show the head
+flights.show()
+
+#Modify the Dataframe in order to add a new column called duration_hrs with flight times in hours.  
+#Note that Spark Dataframes are immutable, so columns can't be updated in place
+flights = flights.withColumn("duration_hrs", flights.air_time/60)
+
+
+#FOR ROWS
+# Filter flights by passing a string. This returns a Spark Dataframe of all flights with a distance greater than 1000
+long_flights1 = flights.filter("distance > 1000")
+
+# Filter flights by passing a column of boolean values
+long_flights2 = flights.filter(flights.distance > 1000)
+
+# Print the data to check they're equal
+long_flights1.show()
+long_flights2.show()
 
 
 
+#Selecting only a set of columns and filtering them
+#.select() returns the columns selected.
+#.withColumn() returns all the columns of the DataFrame in addition to the one you defined. 
+selected1 = flights.select("tailnum", "origin", "dest")
+
+# Select the second set of columns
+temp = flights.select(flights.origin, flights.dest, flights.carrier)
+
+#Notice that temp and selected1 are the same thing
+#These arguments can either be the column name as a string (one for each column) 
+#or a column object (using the df.colName syntax)
 
 
+# Define first filter
+filterA = flights.origin == "SEA"
 
+# Define second filter
+filterB = flights.dest == "PDX"
+
+# Filter the data, first by filterA then by filterB
+selected2 = temp.filter(filterA).filter(filterB)
+
+
+#you can perform any column operation and the .select() method will return the transformed column
+
+# Define avg_speed
+#.alias() renames a column selected
+avg_speed = (flights.distance/(flights.air_time/60)).alias("avg_speed")
+
+# Select the correct columns
+speed1 = flights.select("origin", "dest", "tailnum", avg_speed)
+
+# Create the same table using a SQL expression
+speed2 = flights.selectExpr("origin", "dest", "tailnum", "distance/(air_time/60) as avg_speed")
