@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="d29e9a74-7605-4816-9520-2b47b27b74e6" name="Default Changelist" comment="" />
+    <list default="true" id="d29e9a74-7605-4816-9520-2b47b27b74e6" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/dogvscatclassifier.py" beforeDir="false" afterPath="$PROJECT_DIR$/dogvscatclassifier.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sparklesson.py" beforeDir="false" afterPath="$PROJECT_DIR$/sparklesson.py" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -13,8 +16,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/dogvscatclassifier.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="264">
-              <caret line="143" selection-start-line="143" selection-end-line="145" selection-end-column="55" />
+            <state relative-caret-position="212">
+              <caret line="143" selection-start-line="143" selection-end-line="145" selection-end-column="49" />
               <folding>
                 <element signature="e#0#22#0" expanded="true" />
               </folding>
@@ -186,7 +189,7 @@
       <window_info anchor="bottom" id="Version Control" order="7" />
       <window_info anchor="bottom" id="Terminal" order="8" weight="0.32891566" />
       <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
-      <window_info active="true" anchor="bottom" id="Python Console" order="10" visible="true" weight="0.18554217" />
+      <window_info active="true" anchor="bottom" id="Python Console" order="10" visible="true" weight="0.47228914" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -381,8 +384,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/dogvscatclassifier.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="264">
-          <caret line="143" selection-start-line="143" selection-end-line="145" selection-end-column="55" />
+        <state relative-caret-position="212">
+          <caret line="143" selection-start-line="143" selection-end-line="145" selection-end-column="49" />
           <folding>
             <element signature="e#0#22#0" expanded="true" />
           </folding>

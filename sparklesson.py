@@ -132,6 +132,7 @@ selected2 = temp.filter(filterA).filter(filterB)
 
 #you can perform any column operation and the .select() method will return the transformed column
 
+
 # Define avg_speed
 #.alias() renames a column selected
 avg_speed = (flights.distance/(flights.air_time/60)).alias("avg_speed")
@@ -155,6 +156,50 @@ flights.filter(flights.origin == "SEA").filter(flights.carrier == "DL").groupBy(
 
 # Total hours in the air
 flights.withColumn("duration_hrs", flights.air_time/60).groupBy().sum("duration_hrs").show()
+
+
+
+
+#Grouping
+# Group by tailnum
+by_plane = flights.groupBy("tailnum")
+
+# Number of flights each plane made
+by_plane.count().show()
+
+# Group by origin
+by_origin = flights.groupBy("origin")
+
+# Average duration of flights from PDX and SEA
+by_origin.avg("air_time").show()
+
+
+# Import pyspark.sql.functions as F
+import pyspark.sql.functions as F
+
+# Group by month and dest
+by_month_dest = flights.groupBy("month", "dest")
+
+# Average departure delay by month and destination
+by_month_dest.avg("dep_delay").show()
+
+# Standard deviation of departure delay
+by_month_dest.agg(F.stddev("dep_delay")).show()
+
+
+
+# Examine the data
+airports.show()
+# Rename the faa column
+airports = airports.withColumnRenamed("faa", "dest")
+
+# Join the DataFrames
+flights_with_airports = flights.join(airports, "dest", how="leftouter")
+
+# Examine the new DataFrame
+flights_with_airports.show()
+
+
 
 
 
