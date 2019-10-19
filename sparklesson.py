@@ -1,9 +1,10 @@
 #SparkContext represents the connection to the Spark Cluster
 from pyspark.sql import SparkSession
-from pyspark import SparkContext as sc
+from pyspark import SparkContext
 import pandas as pd
 
 
+sc = SparkContext(appName='MyApp')
 # Verify SparkContext
 print(sc)
 
@@ -73,7 +74,7 @@ print(spark.catalog.listTables())
 # Don't change this file path
 file_path = "/usr/local/share/datasets/airports.csv"
 
-# Read in the airports data
+# Read in the airports data, header=True means first row is a header
 airports = spark.read.csv(file_path, header=True)
 
 # Show the data

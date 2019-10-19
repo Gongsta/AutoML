@@ -33,3 +33,17 @@ cv = tune.CrossValidator(estimator=lr,
                estimatorParamMaps=grid,
                evaluator=evaluator
                )
+
+
+
+# Call lr.fit()
+best_lr = lr.fit(training)
+
+# Print best_lr
+print(best_lr)
+
+# Use the model to predict the test set
+test_results = best_lr.transform(test)
+
+# Evaluate the predictions
+print(evaluator.evaluate(test_results))
